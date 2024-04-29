@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+
+	min-width: 0;
+	background: #000614;
+	background-image: url('../images/background.jpeg');
+    background-size: cover;
+    background-position: left;
+}
+.main{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	padding: 3em 2em 3em 2em;
+	transition: none; /* Disable default transition */
+    animation: blur-transition 7s linear infinite; /* Apply the animation */
+}
+@keyframes blur-transition {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+    50% {
+        backdrop-filter: blur(4px);
+    }
+    100% {
+        backdrop-filter: blur(0px);
+    }
+}
+
+.playfair_display_text {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* 400 - 900 */
+    font-style: normal;
+}
+
+.title-container {
+    text-align: left;
+    padding-top: 10vh;
+	color: #fff;
+	position: relative;
+	width: 100%;
+
+	.title {
+		position: relative;
+		width: 100%;
+		margin-bottom: -1em; /* Adjust the spacing between title and subtitle */
+		font-size: 5em; /* Adjust the font size as needed */
+	}
+
+	.subtitle {
+		position: relative;
+		width: 100%;
+		font-size: 2em; /* Assuming you meant "1em" instead of "1cap" */
+	}
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px; /* Decreased padding to make it smaller */
+    position: relative;
+    cursor: pointer;
+	margin-top: 40vh;
+}
+
+.button a {
+	text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+/* button */
+.button .link {
+    background-color: transparent;
+    font-size: 24px; /* Decreased font size to make it smaller */
+    color: #ffffff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 0;
+    padding-left: 16px; /* Adjusted padding-left */
+    left: 0;
+    line-height: auto;
+    overflow: hidden;
+
+    /* line */
+    &:before {
+        content: "";
+        background-color: #fff;
+        width: 2px; /* Decreased width of the line */
+        height: 31px;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 0px;
+        border-radius: 1px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* arrow */
+    &:after {
+        content: "";
+        width: 10px; /* Decreased width of the arrow */
+        height: 10px; /* Decreased height of the arrow */
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        position: absolute;
+        border: solid 2px #000; /* Decreased border width */
+        border-left: 0;
+        border-bottom: 0;
+        top: calc(50% - 6px); /* Adjusted top position */
+        border-radius: 1px;
+        transform: translateX(-30px) rotate(45deg); /* Adjusted translation */
+        transition: all 0.3s 0.2s ease-in-out;
+    }
+}
+
+/* bg button */
+.button:before {
+    content: "";
+    background-color: white;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    border-radius: 3px;
+    transition: all 0.4s 0.3s ease-in-out;
+}
+
+.button:hover:before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0px;
+}
+
+.button:hover .link {
+    padding-left: 40px; /* Adjusted padding-left on hover */
+    color: #000;
+}
+
+.button:hover .link:before {
+    left: 14px; /* Adjusted left position on hover */
+    transform: rotate(90deg);
+	background-color: #000;
+}
+
+.button:hover .link:after {
+    transform: translate(-22px) rotate(45deg); /* Adjusted translation on hover */
+}
