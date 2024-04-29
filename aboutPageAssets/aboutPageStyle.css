@@ -57,9 +57,24 @@ body {
     font-weight: 400; /* 400 - 900 */
 }
 
+.no{
+    font-style: normal;
+    color: #000;
+    text-decoration: line-through;
+    text-decoration-color: #000;
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .plan-price {
-    font-style: italic;
-    font-weight: 400; /* 400 - 900 */
+    padding-top: 0.5em;
+    padding-left: 1em;
+    font-style: normal;
+    background: linear-gradient(to right, #ff3e0e, #322bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 /* Reviews Section */
@@ -78,13 +93,13 @@ body {
     margin-top: 20px;
     font-weight: 600; /* 400 - 900 */
     font-size: large;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black; /* Adding a black bottom border */
+    padding-bottom: 10px;
+    border-bottom: 2px solid black; /* Adding a black bottom border */
 }
 
 .review-description {
     margin-top: 5px;
-    font-size: medium;
+    font-size: small;
     font-weight: 400; /* 400 - 900 */
 }
 
@@ -139,4 +154,15 @@ a{
 /* Reset animation on hover */
 .gradient-link:hover {
     animation: none;
+}
+
+.apply{
+    color: #000;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #ffffff; /* Adjust footer background color */
+    font-weight: 600; /* 400 - 900 */
+    border-radius: 2px;
+    font-size: xx-large;
+    padding: 1em 0.7em 1em 0.7em;
 }
