@@ -37,8 +37,7 @@ body {
 
 .plan-list {
     margin-top: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 10px 15px 0;
     font-weight: 600; /* 400 - 900 */
     font-size: large;
     transition: border-bottom 0.3s ease, box-shadow 0.3s ease; /* Transition for border and shadow */
