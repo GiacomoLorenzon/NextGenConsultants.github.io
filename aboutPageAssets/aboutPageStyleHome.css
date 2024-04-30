@@ -8,8 +8,8 @@ body {
 	justify-content: center;
 	height: 100vh;
 	overflow: hidden;
-
-	min-width: 0;
+	background-attachment: fixed;
+	min-width: 360px;
 	background: #000614;
 	background-image: url('../images/background.jpeg');
     background-size: cover;
