@@ -14,6 +14,7 @@ body {
     background-position: left;
     backdrop-filter: blur(4px);
     padding: 5vh 5% 5vh 5%;
+	background-attachment: fixed;
 }
 
 .playfair_display_text {
