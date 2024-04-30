@@ -7,7 +7,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	min-width: 0;
+	min-width: 360px;
 	background: #000614;
 	background-image: url('../images/background.jpeg');
     background-size: cover;
